@@ -1,0 +1,48 @@
+﻿@model Lab6_nirmal.Models.Chocolate
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Chocolate</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Chocolate Company</label>
+                <input asp-for="chocolateMake" class="form-control" />
+                <span asp-validation-for="chocolateMake" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Chocolate Name</label>
+                <input asp-for="chocolateName" class="form-control" />
+                <span asp-validation-for="chocolateName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Expiry Date</label>
+                <input asp-for="expireYear" class="form-control" />
+                <span asp-validation-for="expireYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">MRP ($)</label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

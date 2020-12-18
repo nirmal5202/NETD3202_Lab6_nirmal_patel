@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-Lab6_nirmal-AACF6FDF-B58C-40D6-980B-EED96EFAB0D2</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20201218013912_InitialCreate.cs" />
+    <Compile Remove="Data\Migrations\20201218013912_InitialCreate.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201218020924_One.cs" />
+    <Compile Remove="Data\Migrations\20201218020924_One.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>
